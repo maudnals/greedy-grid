@@ -22,7 +22,13 @@ One element = one "cell" with attributes x, y, color.
 Data structure for the grid: a flat list of cells.
 */
 
-// Function
+/*
+------------------------
+Implementation
+------------------------
+*/
+
+const COLORS = Object.freeze(['indianred', 'royalblue', 'purple']);
 
 const findColorableNeighbours = (allCells, cell, color, visitedCells) => {
   console.log('cell', cell);
@@ -51,8 +57,54 @@ const findColorableNeighbours = (allCells, cell, color, visitedCells) => {
   }
 };
 
-const x = findColorableNeighbours(cells, cells[0][0], 'royalblue', {});
-console.log(x);
+function main(block) {
+  //   block.forEach(c => {
+  //     c.color = color;
+  //   });
+  const colorableNeighbours = {
+    [COLORS[0]]: findColorableNeighbours(cells, cells[0][0], COLORS[0], {}),
+    [COLORS[1]]: findColorableNeighbours(cells, cells[0][0], COLORS[1], {}),
+    [COLORS[2]]: findColorableNeighbours(cells, cells[0][0], COLORS[2], {})
+  };
+
+  const sortedColors = Object.entries(colorableNeighbours).sort(
+    (a, b) => a[0].length - b[0].length
+  );
+  const bestColor = sortedColors[sortedColors.length - 1][0];
+  console.log('bestColor', bestColor);
+  //   const colorableNeighbours_0 = findColorableNeighbours(
+  //     cells,
+  //     cells[0][0],
+  //     COLORS[0],
+  //     {}
+  //   );
+  //   const colorableNeighbours_1 = findColorableNeighbours(
+  //     cells,
+  //     cells[0][0],
+  //     COLORS[1],
+  //     {}
+  //   );
+  //   const colorableNeighbours_2 = findColorableNeighbours(
+  //     cells,
+  //     cells[0][0],
+  //     COLORS[2],
+  //     {}
+  //   );
+  console.log(colorableNeighbours);
+  //   console.log(colorableNeighbours_1);
+  //   console.log(colorableNeighbours_2);
+}
+
+main([cells[0][0]]);
+
+// cells[1][1].color = 'indianred';
+// const colorableNeighbours = findColorableNeighbours(
+//   cells,
+//   cells[1][1],
+//   'indianred',
+//   {}
+// );
+// console.log(colorableNeighbours);
 
 // learnings: nested arrays are better for later access
 // double check needed for both cells to exist
