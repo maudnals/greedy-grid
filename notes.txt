@@ -1,0 +1,31 @@
+
+------------------------
+Approach (greedy)
+------------------------
+0) Create an empty array for moves and initialize a counter to zero for moveCount
+1) Look at the monoblock (starting from top left)
+2) For each color: 
+    - Count how many cells of this color are adjacent to this block (directly or not): "colorables"
+    - Take the color for which this count is max
+3) Color all colorables. Keep track of the color in moves and increment moveCount.
+
+Repeat
+
+
+
+------------------------
+APIs
+------------------------
+One element = one "cell" with attributes x, y, color.
+Data structure for the grid: a flat list of cells --> NOPE, a nested one.
+
+
+------------------------
+Learnings
+------------------------
+// nested arrays are better for later access
+// BUT: mutability issue
+// double check needed for both cells to exist
+// check on small example: what are exactly the stop conditions
+// beware when sorting on entries, take the right one (key or value)
+// nested arrays and deep copies!!! must be repeated each time....
