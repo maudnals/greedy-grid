@@ -1,52 +1,61 @@
-const cells = [
-  {
-    color: 'indianred',
-    x: 0,
-    y: 0
-  },
-  {
-    color: 'royalblue',
-    x: 1,
-    y: 0
-  },
-  {
-    color: 'indianred',
-    x: 2,
-    y: 0
-  },
-  {
-    color: 'royalblue',
-    x: 0,
-    y: 1
-  },
-  {
-    color: 'purple',
-    x: 1,
-    y: 1
-  },
-  {
-    color: 'indianred',
-    x: 2,
-    y: 1
-  },
-  {
-    color: 'purple',
-    x: 0,
-    y: 2
-  },
-  {
-    color: 'royalblue',
-    x: 1,
-    y: 2
-  },
-  {
-    color: 'purple',
-    x: 2,
-    y: 2
-  }
+export const cells = [
+  // row 0
+  [
+    {
+      color: 'royalblue',
+      x: 0,
+      y: 0
+    },
+    {
+      color: 'royalblue',
+      x: 1,
+      y: 0
+    },
+    {
+      color: 'indianred',
+      x: 2,
+      y: 0
+    }
+  ],
+  // row 2
+  [
+    {
+      color: 'royalblue',
+      x: 0,
+      y: 1
+    },
+    {
+      color: 'purple',
+      x: 1,
+      y: 1
+    },
+    {
+      color: 'indianred',
+      x: 2,
+      y: 1
+    }
+  ],
+  // row 3
+  [
+    {
+      color: 'purple',
+      x: 0,
+      y: 2
+    },
+    {
+      color: 'royalblue',
+      x: 1,
+      y: 2
+    },
+    {
+      color: 'purple',
+      x: 2,
+      y: 2
+    }
+  ]
 ];
 
-createAndAddElementForCell = cell => {
+const createAndAddElementForCell = cell => {
   const cellEl = document.createElement('div');
   cellEl.setAttribute(
     'style',
