@@ -2,7 +2,6 @@ export const COLORS = Object.freeze(['royalblue', 'hotpink', 'purple']);
 
 const getRandomColor = () => COLORS[Math.floor(Math.random() * COLORS.length)];
 
-console.log(getRandomColor());
 export const cells = [
   // row 0 (y = 0)
   [
