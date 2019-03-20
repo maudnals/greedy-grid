@@ -17,7 +17,7 @@ export const cells = [
       y: 0
     }
   ],
-  // row 2
+  // row 1
   [
     {
       color: 'royalblue',
@@ -35,7 +35,7 @@ export const cells = [
       y: 1
     }
   ],
-  // row 3
+  // row 2
   [
     {
       color: 'purple',
@@ -66,4 +66,4 @@ const createAndAddElementForCell = cell => {
   document.body.appendChild(cellEl);
 };
 
-cells.forEach(c => createAndAddElementForCell(c));
+cells.forEach(row => row.forEach(c => createAndAddElementForCell(c)));
