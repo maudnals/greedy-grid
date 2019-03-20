@@ -1,4 +1,4 @@
-import { cells } from './data.js';
+import { cells, COLORS } from './data.js';
 import displayGrid from './display.js';
 
 displayGrid(cells, 2, 'START');
@@ -30,7 +30,6 @@ Implementation
 ------------------------
 */
 
-const COLORS = Object.freeze(['indianred', 'royalblue', 'purple']);
 const block = [{ x: 0, y: 0 }];
 let moves = [];
 let iterations_count = 0;
