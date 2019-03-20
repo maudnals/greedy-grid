@@ -1,5 +1,7 @@
-import { cells } from './gridDisplay.js';
-console.log(cells);
+import { cells } from './data.js';
+import displayGrid from './display.js';
+
+displayGrid(cells, 2, 'START');
 /*
 ------------------------
 Approach (greedy)
@@ -78,12 +80,6 @@ const colorBlock = (c, block, color) => {
 };
 
 function main() {
-  //   block.forEach(c => {
-  //     c.color = color;
-  //   });
-  //   console.log(checkIsMonochrome(cells));
-  //   let i = 0;
-  //   while (i < 8) {
   while (!checkIsMonochrome(cells)) {
     iterations_count++;
     const cells0 = colorBlock(
@@ -120,6 +116,7 @@ function main() {
   }
   console.log(`Finished in ${iterations_count} iterations`);
   console.log(`Moves: ${moves}`);
+  displayGrid(cells, 10, 'END');
 }
 
 main();
