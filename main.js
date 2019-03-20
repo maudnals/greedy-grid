@@ -86,22 +86,11 @@ function main() {
   //   while (i < 8) {
   while (!checkIsMonochrome(cells)) {
     iterations_count++;
-    //   console.log(checkIsMonochrome(cells));
-    console.log('----------------');
-    console.log('----------------');
-    console.log('----------------');
-    console.log('----------------');
-    console.log('block', block);
-    console.log('cells before first', cells[0][0]);
-    const cp = JSON.parse(JSON.stringify(cells));
-    //   const cp = [...cells].map(c => [...c]);
     const cells0 = colorBlock(
       JSON.parse(JSON.stringify(cells)),
       block,
       COLORS[0]
     );
-
-    //   console.log('cells after first', cells[0][0]);
     const cells1 = colorBlock(
       JSON.parse(JSON.stringify(cells)),
       block,
@@ -113,26 +102,18 @@ function main() {
       COLORS[2]
     );
 
-    //   console.log('cells0', cells0[0][0]);
-    //   console.log('cells1', cells1[0][0]);
-    //   console.log('cells2', cells2[0][0]);
-
     const colorableNeighbours = {
       [COLORS[0]]: findColorableNeighbours(cells0, cells0[0][0], COLORS[0], {}),
       [COLORS[1]]: findColorableNeighbours(cells1, cells1[0][0], COLORS[1], {}),
       [COLORS[2]]: findColorableNeighbours(cells2, cells2[0][0], COLORS[2], {})
     };
 
-    console.log('colorableNeighbours', colorableNeighbours);
-
     const sortedColors = Object.entries(colorableNeighbours).sort(
       (a, b) => a[1].length - b[1].length
     );
     const bestColor = sortedColors[sortedColors.length - 1][0];
     moves = [...moves, bestColor];
-    console.log('coloring to', bestColor);
     colorableNeighbours[bestColor].forEach(c => {
-      console.log(c);
       block.push(cells[c.y][c.x]);
       cells[c.y][c.x].color = bestColor;
     });
