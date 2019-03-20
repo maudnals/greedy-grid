@@ -1,5 +1,5 @@
 export const cells = [
-  // row 0
+  // row 0 (y = 0)
   [
     {
       color: 'royalblue',
@@ -17,7 +17,7 @@ export const cells = [
       y: 0
     }
   ],
-  // row 1
+  // row 1 (y = 1)
   [
     {
       color: 'indianred',
