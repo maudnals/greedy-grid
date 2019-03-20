@@ -7,7 +7,7 @@ export const cells = [
       y: 0
     },
     {
-      color: 'royalblue',
+      color: 'purple',
       x: 1,
       y: 0
     },
@@ -20,7 +20,7 @@ export const cells = [
   // row 1
   [
     {
-      color: 'royalblue',
+      color: 'indianred',
       x: 0,
       y: 1
     },
@@ -30,7 +30,7 @@ export const cells = [
       y: 1
     },
     {
-      color: 'indianred',
+      color: 'royalblue',
       x: 2,
       y: 1
     }
