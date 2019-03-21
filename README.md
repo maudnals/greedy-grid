@@ -1,3 +1,8 @@
+Disclaimer:  
+**I have noted that it's not necessary to build an interface :)**
+However: I've realized that I was debugging faster when I could rely on a visual representation. The interface you see is just an artefact!
+
+
 # Demo  
 
 
@@ -21,7 +26,7 @@
 
 ## Disclaimer
 
-I have seen that it's not necessary to build an interface :)
+I have noted that it's not necessary to build an interface :)
 However: I've realized that I was debugging faster when I could rely on a visual representation. The interface you see is just an artefact!
 
 ## Project structure
