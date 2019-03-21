@@ -2,7 +2,7 @@ Disclaimer:
 
 - **I took note that the assignment is not about building an interface :)**
   However: I've realized that I was debugging faster when I could rely on a visual representation. The interface you see is just an artefact!
-- This implementation could be improved (see list below); I have not applied these improvements for the sake of timeboxing
+- This implementation could be improved (see list below); I have not applied these improvements for the sake of timeboxing.
 
 # Demo
 
