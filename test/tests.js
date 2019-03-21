@@ -34,7 +34,6 @@ const TESTS = {
     .flat()
     .map(cell => `(x=${cell.x}, y=${cell.y}): ${cell.color}`)}'`]: function() {
     const output = play(normalGrid(), [normalGrid()[0][0]]);
-    console.log('4', output);
     return output.iterationsCount === 4;
   },
   [`should do the moves "COLORS[2] ➞ COLORS[1] ➞ COLORS[0] ➞ COLORS[2]" on input grid '${normalGrid()
@@ -43,13 +42,15 @@ const TESTS = {
     const expectedMoves = [COLORS[2], COLORS[1], COLORS[0], COLORS[2]];
     const output = play(normalGrid(), [normalGrid()[0][0]]);
     const moves = play(normalGrid(), [normalGrid()[0][0]]).moves;
-    console.log(expectedMoves);
-    console.log(output);
     return JSON.stringify(expectedMoves) === JSON.stringify(moves);
+  },
+  'the # of iterations and of moves should always be the same': function() {
+    const output = play(normalGrid(), [normalGrid()[0][0]]);
+    return output.iterationsCount === output.moves.length;
   }
-  // on any input the moves and iteration coutn should be the same
 };
 
+// grid factory
 // test: mostly on the "play" function (= the main one)
 // Rendering functions are not tested
 // Factory functions also not
