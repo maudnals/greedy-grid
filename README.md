@@ -21,12 +21,7 @@ Note:
   - Open the console to see the tests running
   - Reload the page to see the output for a different input
 
-# Notes
-
-## Disclaimer
-
-**I took note that the assignment is not about building an interface :)**
-However: I've realized that I was debugging faster when I could rely on a visual representation. The interface you see is just an artefact!
+# About
 
 ## Project structure
 
