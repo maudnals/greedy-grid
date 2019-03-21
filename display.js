@@ -9,19 +9,38 @@ const createAndAddCellElement = (cell, left) => {
   document.body.appendChild(cellEl);
 };
 
-const createAndAddTitlElement = (title, left) => {
+const createAndAddTitleElement = (title, left) => {
   const titleEl = document.createElement('div');
   titleEl.innerHTML = title;
   titleEl.setAttribute(
     'style',
-    `position: absolute; top: 1rem; left: ${left}rem;`
+    `font-family: Sans-Serif; position: absolute; top: 1rem; left: ${left}rem;`
   );
   document.body.appendChild(titleEl);
 };
 
-const displayGrid = (cells, left, title) => {
-  createAndAddTitlElement(title, left);
-  cells.forEach(row => row.forEach(c => createAndAddCellElement(c, left)));
+const createAndAddOutputElement = (output, left) => {
+  const movesAsString = output.moves
+    .map((m, idx) => `${output.moves[idx]}`)
+    .join(' ➞ ');
+  const outputEl = document.createElement('div');
+  outputEl.innerHTML = `
+    <div><strong>Iterations</strong>: ${output.iterationsCount}</div> 
+    <div><strong>Moves</strong>: ${movesAsString}</div>`;
+  outputEl.setAttribute(
+    'style',
+    `font-family: Sans-Serif; position: absolute; top: 1rem; left: ${left}rem;`
+  );
+  document.body.appendChild(outputEl);
 };
 
-export default displayGrid;
+const displayGrid = (grid, left, title) => {
+  createAndAddTitleElement(title, left);
+  grid.forEach(row => row.forEach(c => createAndAddCellElement(c, left)));
+};
+
+const displayGameOutput = (output, left) => {
+  createAndAddOutputElement(output, left);
+};
+
+export { displayGameOutput, displayGrid };
