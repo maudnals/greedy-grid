@@ -39,7 +39,7 @@ However: I've realized that I was debugging faster when I could rely on a visual
 ## About the tests
 
 - They mainly focus on the `play` function for now. Ideally, each utility function should also have tests.
-- I've built the project intentionally **without** a test library, to avoid install requirements for the person evaluating the coding challenge. In a real project, I would of course rather use exisiting test libraries (mocha for JS, pytest for python).
+- I've built the project intentionally **without** a test library, to avoid install requirements for the person evaluating the coding challenge. In a real project, I would instead use exisiting test libraries (mocha for JS, pytest for python).
 - I've written the tests in a regular JS module, so that they can be run on page load without explicit action of the person evaluating the code challenge. In a real project, they would be run in node.
 
 ## What to improve
