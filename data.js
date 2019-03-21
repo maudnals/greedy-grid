@@ -1,6 +1,7 @@
 export const COLORS = Object.freeze(['royalblue', 'hotpink', 'purple']);
 
-const getRandomColor = () => COLORS[Math.floor(Math.random() * COLORS.length)];
+export const getRandomColor = () =>
+  COLORS[Math.floor(Math.random() * COLORS.length)];
 
 export const grid = [
   // row 0 (y = 0)

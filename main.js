@@ -7,7 +7,6 @@ function main(grid) {
   // at start the "monochrome cells block" is just the top left cell
   const initialMonochromeCellsBlock = [grid[0][0]];
   const gameOutput = play(grid, initialMonochromeCellsBlock);
-  console.log(gameOutput);
   displayGrid(grid, 10, 'END');
   displayGameOutput(gameOutput, 20);
 }
