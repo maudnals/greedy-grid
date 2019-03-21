@@ -1,5 +1,5 @@
-import play from '../play.js';
-import { COLORS } from '../data.js';
+import play from '../src/play.js';
+import { COLORS } from '../src/data.js';
 import {
   missingColorsGrid,
   monochromeGrid,

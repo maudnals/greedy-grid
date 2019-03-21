@@ -1,4 +1,4 @@
-import { getRandomColor, COLORS } from '../data.js';
+import { getRandomColor, COLORS } from '../src/data.js';
 
 export const nonSquareGrid = () => [
   // row 0 (y = 0)
