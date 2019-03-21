@@ -1,16 +1,14 @@
-Disclaimer:  
-**I have noted that it's not necessary to build an interface :)**
-However: I've realized that I was debugging faster when I could rely on a visual representation. The interface you see is just an artefact!
+Disclaimer:
 
+- **I took note that the assignment is not about building an interface :)**
+  However: I've realized that I was debugging faster when I could rely on a visual representation. The interface you see is just an artefact!
+- This implementation could be improved (see list below); I have not applied these improvements for the sake of timeboxing
 
-# Demo  
-
+# Demo
 
 <p align="center">
 <img width="520" src="https://raw.githubusercontent.com/maudnals/greedy-grid/master/doc/demo.gif">  
-</p>   
-
-
+</p>
 
 # How to run
 
@@ -26,7 +24,7 @@ However: I've realized that I was debugging faster when I could rely on a visual
 
 ## Disclaimer
 
-I have noted that it's not necessary to build an interface :)
+**I took note that the assignment is not about building an interface :)**
 However: I've realized that I was debugging faster when I could rely on a visual representation. The interface you see is just an artefact!
 
 ## Project structure
@@ -47,5 +45,5 @@ However: I've realized that I was debugging faster when I could rely on a visual
 ## What to improve
 
 - There should be a factory function to create the grid input.
-- Some of the functions mutate the input. This is not ideal.
+- Some of the functions mutate the input. This is not ideal, since it can lead to side effects. I know what should be changed in order to have mutable functions ; I have not applied the changes for timeboxing reasons.
 - The code could be less verbose.
