@@ -14,7 +14,7 @@ Disclaimer:
 
 - Download this repository
 - Run a web server within this repo, e.g. by running `http-server` if you have it installed
-- Open the server's address in your browser (tested in Chrome and Firefox)
+- Open the server's address in your browser. Ideally use Chrome and Firefox, since the code has been tested for these two browsers.
 - That's it!
 - Optionally:
   - Open the console to see the tests running
