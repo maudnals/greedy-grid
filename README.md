@@ -1,6 +1,11 @@
-README.md
+# Demo  
 
-# Demo
+
+<p align="center">
+<img width="520" src="https://raw.githubusercontent.com/maudnals/greedy-grid/master/doc/demo.gif">  
+</p>   
+
+
 
 # How to run
 
