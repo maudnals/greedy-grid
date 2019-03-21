@@ -45,5 +45,5 @@ However: I've realized that I was debugging faster when I could rely on a visual
 ## What to improve
 
 - There should be a factory function to create the grid input.
-- Some of the functions mutate the input. This is not ideal, since it can lead to side effects. I know what should be changed in order to have mutable functions ; I have not applied the changes for timeboxing reasons.
+- Some of the functions mutate the input. This is not ideal, since it can lead to side effects. I know what should be changed in order to avoi mutation ; I have not applied the changes for timeboxing reasons.
 - The code could be less verbose.
