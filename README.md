@@ -1,4 +1,4 @@
-Disclaimer:
+Note:
 
 - **I took note that the assignment is not about building an interface :)**
   However: I've realized that I was debugging faster when I could rely on a visual representation. The interface you see is just an artefact!  
