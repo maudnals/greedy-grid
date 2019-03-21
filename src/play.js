@@ -8,7 +8,7 @@ const play = (grid, monochromeCellsBlock) => {
   checkInputIsValid(grid);
   let moves = [];
   let iterationsCount = 0;
-  while (!checkIsMonochrome(grid)) {
+  while (!checkGridIsMonochrome(grid)) {
     const bestColor = move_mutative(grid, monochromeCellsBlock);
     // keep track of the moves and count iterations
     iterationsCount++;
@@ -113,7 +113,7 @@ const colorizeCells = (grid, cells, color) => {
 };
 
 // Check if the grid is fully colored (used as stop condition)
-const checkIsMonochrome = grid => {
+const checkGridIsMonochrome = grid => {
   const cells = [...grid].flat();
   const color = cells[0].color;
   for (let cell of cells) {
