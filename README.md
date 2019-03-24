@@ -1,8 +1,9 @@
-Disclaimer:
+Note:
 
 - **I took note that the assignment is not about building an interface :)**
-  However: I've realized that I was debugging faster when I could rely on a visual representation. The interface you see is just an artefact!
-- This implementation could be improved (see list below); I have not applied these improvements for the sake of timeboxing
+  However: I've realized that I was debugging faster when I could rely on a visual representation. The interface you see is just an artefact!  
+- This implementation can scale to any numbers of colors.
+- This implementation could be improved (see list below); I have not applied these improvements for the sake of timeboxing. 
 
 # Demo
 
@@ -14,18 +15,13 @@ Disclaimer:
 
 - Download this repository
 - Run a web server within this repo, e.g. by running `http-server` if you have it installed
-- Open the server's address in your browser (tested in Chrome and Firefox)
+- Open the server's address in your browser. Ideally use Chrome and Firefox, since the code has been tested for these two browsers.
 - That's it!
 - Optionally:
   - Open the console to see the tests running
   - Reload the page to see the output for a different input
 
-# Notes
-
-## Disclaimer
-
-**I took note that the assignment is not about building an interface :)**
-However: I've realized that I was debugging faster when I could rely on a visual representation. The interface you see is just an artefact!
+# About
 
 ## Project structure
 
@@ -45,5 +41,6 @@ However: I've realized that I was debugging faster when I could rely on a visual
 ## What to improve
 
 - There should be a factory function to create the grid input.
-- Some of the functions mutate the input. This is not ideal, since it can lead to side effects. I know what should be changed in order to avoi mutation ; I have not applied the changes for timeboxing reasons.
-- The code could be less verbose.
+- Some of the functions mutate the input. This is not ideal, since it can lead to side effects. I absolutely don't like this. I know what should be changed in order to avoid mutation ; I have not applied the changes for timeboxing reasons.
+- The code could be less verbose. 
+- ...
